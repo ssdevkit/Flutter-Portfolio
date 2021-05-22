@@ -17,4 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 ![Alt text](./assets/feature/Portfolio.png?raw=true "Title")
 
-<img src="../assets/feature/Portfolio.png" alt=""/>
+<img src="assets/feature/Portfolio.png" alt="Portfolio"/>
