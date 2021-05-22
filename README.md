@@ -17,4 +17,4 @@ samples, guidance on mobile development, and a full API reference.
 
 <img src="assets/feature/Portfolio.png">
 
-![](../main/assets/feature/Portfolio.png)
+![Screenshot](../main/assets/feature/Portfolio.png)
