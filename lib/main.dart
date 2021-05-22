@@ -32,27 +32,74 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: CustomScrollView(
-      slivers: [
-        SliverAppBar(
-          title: Text('Title Here'),
-          expandedHeight: MediaQuery.of(context).size.height / 3,
-          flexibleSpace: FlexibleSpaceBar(
-            centerTitle: true,
-            title: Text('Title'),
-            background: Image.network(
-              'https://images.pexels.com/photos/443356/pexels-photo-443356.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-              fit: BoxFit.cover,
+      backgroundColor: Colors.blue[100],
+        body: Stack(
+          children: [
+            Center(
+              child: Container(
+                width: MediaQuery.of(context).size.width * 0.7,
+                height: MediaQuery.of(context).size.height * 0.7,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(20.0),
+                  color: Colors.white,
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey,
+                      blurRadius: 2.0,
+                      spreadRadius: 0.0,
+                      offset: Offset(2.0, 2.0), // shadow direction: bottom right
+                    )
+                  ],
+                ),
+                child: Container(
+                  child: Column(
+                    children: [
+                      Row(
+                        children: [
+                          Container(margin: EdgeInsets.all(20),
+                              child: Text(
+                                'John Doe',
+                              style: TextStyle(
+                                fontSize: Theme.of(context).textTheme.headline4!.fontSize
+                              ),
+                              )
+                          ),
+                          Expanded(child: Text(''),),
+                          Container(margin: EdgeInsets.all(20),
+                              child: Icon(Icons.person_rounded)
+                          )
+                        ],
+                      ),
+                      Expanded(
+                        child: Container(
+                          //width: MediaQuery.of(context).size.width * 0.8,
+                          //height: MediaQuery.of(context).size.height * 0.8,
+                          decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              color: Colors.amber
+                          ),
+                        ),
+                      ),
+                      Row(
+                        children: [
+                          Container(margin: EdgeInsets.all(20),child: Text('Contacts')),
+                          Expanded(child: Text(''),),
+                          Container(margin: EdgeInsets.all(20),child: Text('Social Media'))
+                        ],
+                      ),
+                    ],
+                  )
+                ),
+              ),
             ),
-          ),
+            Center(
+              child: Image(
+                width: MediaQuery.of(context).size.width * 0.4,
+                image: AssetImage('photo/profile.png'),
+              ),
+            ),
+          ],
         ),
-        SliverList(
-          delegate: SliverChildBuilderDelegate(
-            (context, index) => ListTile(title: Text('Item#$index')),
-            childCount: 100,
-          ),
-        ),
-      ],
-    ));
+    );
   }
 }
