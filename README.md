@@ -15,6 +15,5 @@ For help getting started with Flutter, view
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-<img src="assets/feature/Portfolio.png">
+<img src="https://github.com/ssdevkit/Flutter-Portfolio/blob/main/assets/feature/Portfolio.PNG">
 
-![Screenshot](../main/assets/feature/Portfolio.png)
