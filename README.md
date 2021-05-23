@@ -2,6 +2,10 @@
 
 Simple Portfolio UI build with Flutter.
 
+- Landscape view.
+- Caveat - Google Fonts on name.
+- Horizontal flip on profile avatar. 
+
 ## Screenshots
 
 ![](assets/feature/Portfolio.PNG)
