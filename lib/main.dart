@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'dart:math' as math;
 
 void main() {
   runApp(MyApp());
@@ -35,8 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
       backgroundColor: Colors.blue[100],
         body: Center(
           child: Container(
-            width: MediaQuery.of(context).size.width * 0.7,
-            height: MediaQuery.of(context).size.height * 0.7,
+            width: MediaQuery.of(context).size.width * 0.5,
+            height: MediaQuery.of(context).size.height * 0.5,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(20.0),
               color: Colors.white,
@@ -54,26 +56,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Column(
                       children: [
-                        Row(
-                          children: [
-                            Container(margin: EdgeInsets.all(20),
-                                child: Text(
-                                  'John Doe',
-                                  style: TextStyle(
-                                      fontSize: Theme.of(context).textTheme.headline4!.fontSize
-                                  ),
-                                )
-                            ),
-                            Expanded(child: Text(''),),
-                            Container(margin: EdgeInsets.all(20),
-                                child: Icon(Icons.person_rounded)
-                            )
-                          ],
-                        ),
                         Expanded(
                           child: Container(
-                            //width: MediaQuery.of(context).size.width * 0.8,
-                            //height: MediaQuery.of(context).size.height * 0.8,
+                            margin: EdgeInsets.fromLTRB(0, 20, 0, 0),
+                            width: MediaQuery.of(context).size.width * 0.5,
+                            height: MediaQuery.of(context).size.height * 0.5,
                             decoration: BoxDecoration(
                                 shape: BoxShape.circle,
                                 color: Colors.amber
@@ -82,18 +69,44 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         Row(
                           children: [
-                            Container(margin: EdgeInsets.all(20),child: Text('Contacts')),
+                            Container(margin: EdgeInsets.all(20),
+                                child: Text(
+                                  'John Doe',
+                                  style: GoogleFonts.caveat(
+                                    textStyle: TextStyle(
+                                        fontSize: Theme.of(context).textTheme.headline3!.fontSize
+                                    ),
+                                  )
+                                )
+                            ),
                             Expanded(child: Text(''),),
-                            Container(margin: EdgeInsets.all(20),child: Text('Social Media'))
+                            Align(
+                              alignment: Alignment.bottomRight,
+                              child: Container(
+                                  margin: EdgeInsets.fromLTRB(0, 0, 20, 0),
+                                  child: Text(
+                                    'John.Doe@gmail.com',
+                                      style: GoogleFonts.caveat(
+                                        textStyle: TextStyle(
+                                            fontSize: Theme.of(context).textTheme.headline6!.fontSize
+                                        ),
+                                      )
+                                  )
+                              ),
+                            )
                           ],
                         ),
                       ],
                     ),
                     Align(
                       alignment: Alignment.bottomCenter,
-                      child: Image(
-                        width: MediaQuery.of(context).size.width * 0.4,
-                        image: AssetImage('photo/profile.png'),
+                      child: Transform(
+                        transform: Matrix4.rotationY(math.pi),
+                        alignment: Alignment.center,
+                        child: Image(
+                          width: MediaQuery.of(context).size.width * 0.4,
+                          image: AssetImage('photo/profile.png'),
+                        ),
                       ),
                     ),
                   ],
