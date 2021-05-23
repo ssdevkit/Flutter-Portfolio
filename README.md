@@ -1,14 +1,18 @@
 # Flutter_Portfolio
 
-Simple Portfolio UI build with Flutter.
+Simple Portfolio UI build with Flutter. 
 
-- Landscape view.
-- Caveat - Google Fonts on name.
+- Caveat - Google Fonts used.
 - Horizontal flip on profile avatar. 
+- Responsive to desktop, tablet and mobile layout.
 
 ## Screenshots
 
-![](assets/feature/Portfolio.PNG)
+![Desktop layout](assets/feature/Portfolio-desktop.PNG)
+
+![Tablet layout](assets/feature/Portfolio-tablet.PNG)
+
+![Mobile layout](assets/feature/Portfolio-mobile.PNG)
 
 ## Getting Started
 
@@ -22,3 +26,4 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view 
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
